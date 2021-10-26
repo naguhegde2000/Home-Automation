@@ -1,0 +1,266 @@
+<!DOCTYPE html >
+<html>
+    <title>home_automation</title>
+    <head>
+        <link rel="stylesheet" href="automatic.css">
+    </head>
+
+    <style>
+        html,body{
+        margin:0;
+        padding:0;
+        overflow-x:hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y:scroll ;
+        height: 100%;
+        min-height: 100%;
+        max-height: 100%;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+
+    <body style="background-color: cornsilk">
+        <br>
+        <br>
+        <br>
+        <div class="set">
+        <h1 style="text-align: center;">&emsp;Home Automation</h1>
+        <hr class="line">
+      <div class="x1">
+        <h5>Choose the Lights to control</h5>
+        <input type="checkbox" name="xyz" id='cbox' class="cc" onchange="fun();" value="1"><label>Light1</label>
+        <input style="display: inline;" type="radio" name="xyz" id='x1' value="HIGH">
+        <label for="x1">ON</label>
+        <input style="display: inline;" type="radio" name="xyz" id='x2' value="LOW">
+        <label for="x2">OFF</label>   
+        <br>
+
+        <input type="checkbox" name="ab" id='c1box' class="cc1" onchange="fun1();" value="2"><label>Light2</label>
+        <input style="display: inline;" type="radio" name="ab" id='x3' value="HIGH">
+        <label for="x3">ON</label>
+        <input style="display: inline;" type="radio" name="ab" id='x4' value="LOW">
+        <label for="x4">OFF</label>
+        <br>
+
+        <input type="checkbox" name="abc" id='c2box' class="cc2" onchange="fun2();" value="3"><label>Light3</label>
+        <input style="display: inline;" type="radio" name="abc" id='x5' value="HIGH">
+        <label for="x5">ON</label>
+        <input style="display: inline;" type="radio" name="abc" id='x6' value="LOW">
+        <label for="x6">OFF</label>
+        <br>
+
+        <input type="checkbox" name="abcd" id='c3box' class="cc3" onchange="fun3();" value="4"><label>Light4</label>
+        <input style="display: inline;" type="radio" name="abcd" id='x7' value="HIGH">
+        <label for="x7">ON</label>
+        <input style="display: inline;" type="radio" name="abcd" id='x8' value="LOW">
+        <label for="x8">OFF</label>
+        <br>
+
+        <input type="checkbox" name="abcde" id='c4box' class="cc4" onchange="fun4();" value="5"><label>Light5</label>
+        <input style="display: inline;" type="radio" name="abcde" id='x9' value="HIGH">
+        <label for="x9">ON</label>
+        <input style="display: inline;" type="radio" name="abcde" id='x10' value="LOW">
+        <label for="x10">OFF</label>
+        <br>
+        <br>
+
+        <button  class="send" id='but1'  onclick="bfun();">SEND SIGNAL</button>
+    
+    </div> 
+</div>
+    <script>
+        function fun(){
+            c1=document.getElementsByClassName("cc");
+            if(!c1[0].checked)
+            {
+            document.getElementById('x1').checked=false
+            document.getElementById('x2').checked=false
+            }
+        }
+
+        function fun1(){
+            c1=document.getElementsByClassName("cc1");
+            if(!c1[0].checked)
+            {
+            document.getElementById('x3').checked=false
+            document.getElementById('x4').checked=false
+            }
+        }
+
+        function fun2(){
+            c1=document.getElementsByClassName("cc2");
+            if(!c1[0].checked)
+            {
+            document.getElementById('x5').checked=false
+            document.getElementById('x6').checked=false
+            }
+        }
+
+        function fun3(){
+            c1=document.getElementsByClassName("cc3");
+            if(!c1[0].checked)
+            {
+            document.getElementById('x7').checked=false
+            document.getElementById('x8').checked=false
+            }
+        }
+
+        function fun4(){
+            c1=document.getElementsByClassName("cc4");
+            if(!c1[0].checked)
+            {
+            document.getElementById('x9').checked=false
+            document.getElementById('x10').checked=false
+            }
+        }
+
+        function bfun()
+        {
+         var count=document.getElementsByClassName("cc");
+         var count1=document.getElementsByClassName("cc1");
+         var count2=document.getElementsByClassName("cc2");
+         var count3=document.getElementsByClassName("cc3");
+         var count4=document.getElementsByClassName("cc4");
+         var total=0;
+         var arr=[]
+         var arr1=[]
+         if(count[0].checked)
+         {  
+            z1=document.getElementById("cbox");
+            arr1.push(z1.value)
+            var rr=document.getElementById("x1");
+            var rrr=document.getElementById("x2");
+            let sel="";
+                if(rr.checked)
+                {
+                    sel=rr.value;         
+                }
+                else if(rrr.checked)
+                {
+                    sel=rrr.value;
+                }
+                else
+                {
+                    alert("Invalid Operation")
+                }  
+            
+            
+            
+            arr.push(sel);
+            total=total+1;
+        }
+         if(count1[0].checked)
+         {
+            z2=document.getElementById("c1box");
+            arr1.push(z2.value)
+            var rr=document.getElementById("x3");
+            var rrr=document.getElementById("x4");
+            let sel="";
+                if(rr.checked)
+                {
+                    sel=rr.value;         
+                }
+                else if(rrr.checked)
+                {
+                    sel=rrr.value;
+                }
+                else
+                {
+                    alert("Invalid Operation")
+                }  
+            
+            
+            
+            arr.push(sel);
+            total=total+1;
+         }
+         if(count2[0].checked)
+         {
+            z3=document.getElementById("c2box");
+            arr1.push(z3.value)
+            var rr=document.getElementById("x5");
+            var rrr=document.getElementById("x6");
+            let sel="";
+                if(rr.checked)
+                {
+                    sel=rr.value;         
+                }
+                else if(rrr.checked)
+                {
+                    sel=rrr.value;
+                }
+                else
+                {
+                    alert("Invalid Operation")
+                }  
+            
+            
+            
+            arr.push(sel);
+            total=total+1;
+         }
+         if(count3[0].checked)
+         {
+            z4=document.getElementById("c3box");
+            arr1.push(z4.value)
+            var rr=document.getElementById("x7");
+            var rrr=document.getElementById("x8");
+            let sel="";
+                if(rr.checked)
+                {
+                    sel=rr.value;         
+                }
+                else if(rrr.checked)
+                {
+                    sel=rrr.value;
+                }
+                else
+                {
+                    alert("Invalid Operation")
+                }  
+            
+            
+            
+            arr.push(sel);
+            total=total+1;
+         }
+         if(count4[0].checked)
+         {
+            z5=document.getElementById("c4box");
+            arr1.push(z5.value)
+            var rr=document.getElementById("x9");
+            var rrr=document.getElementById("x10");
+            let sel="";
+                if(rr.checked)
+                {
+                    sel=rr.value;         
+                }
+                else if(rrr.checked)
+                {
+                    sel=rrr.value;
+                }
+                else
+                {
+                    alert("Invalid Operation")
+                }  
+            
+            
+            
+            arr.push(sel);
+            total=total+1;
+         }
+
+        if(total>0)
+        {
+            alert("pins="+arr1+"&states="+arr)
+        }
+        else{
+            alert("Please select light")
+        }
+        }
+    </script>
+    </body>
+</html>

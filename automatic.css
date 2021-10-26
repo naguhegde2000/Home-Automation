@@ -1,0 +1,38 @@
+.set
+{
+    position: relative;
+    left: 2%;
+    top: 100px;
+}
+.h1
+{
+    font-weight: bold;
+
+}
+
+.line
+{
+    position: relative;
+    left: 18px;
+    width: 50%;
+    height: 1px;
+    background-color: yellowgreen;
+}
+
+.x1
+{
+    box-sizing: border-box; 
+    position: relative;
+    left: 40%;
+     top:30px;
+}
+.send
+{
+    background-color: rgb(21, 151, 21);
+    padding:10px 3px; border-radius: 3px; 
+    text-align: center; font-weight: bold; 
+    color: white; 
+    font-size: 10px;
+    position: relative;
+    left: 1%;
+}
