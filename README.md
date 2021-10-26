@@ -1,7 +1,7 @@
 WHAT IT IS?
 
 
-This is a small project on the part of home-automation system. It detects the status of the switches in the home and clearly alert the user about staus of the switch.
+This is a small project on the part of home-automation system. It detects the status of the switches in the home and clearly alerts the user about staus of the switch.
 
 Status:
 1. Active : Switch ON and is Selected.
